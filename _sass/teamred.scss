@@ -1,0 +1,31 @@
+// Typeface and Swatch configuration for the teamred theme
+
+// Colors
+$primary-light:     red;
+$primary-dark:      red;
+$secondary-light:   purple;
+$secondary-dark:    purple;
+
+$background-dark:   #272020;
+$background-light:  #E7E0DA;
+$card-dark:         lighten($background-dark, 20%);
+$card-light:        darken($background-light, 15%);
+
+$text-grey-dark:    #A09087;
+$text-dark:         #D0C0B7;
+$text-grey-light:   #605047;
+$text-light:        #302727;
+
+// Typefaces
+$body-font:         "Muli", Helvetica, Arial, sans-serif;
+$headline-font:     "Josefin Sans", Helvetica, Arial, sans-serif;
+$monospace-font:    "Source Code Pro", monospace;
+
+// Sizes
+$content-width:     1024px;
+$mobile-max:        640px;
+$laptop-max:        960px;
+
+$spacer-large:      24px;
+$spacer-medium:     12px;
+$spacer-small:      8px;
