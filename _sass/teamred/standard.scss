@@ -1,0 +1,40 @@
+// Standard HTML elements
+
+html {
+    font-family: $body-font;
+    background-color: $background-dark;
+    color: $text-dark;
+    font-weight: $normal-weight;
+}
+
+a {
+    color: $primary-dark;
+    text-decoration: none;
+    font-weight: $bold-weight;
+    &:hover {
+        color: $primary-light;
+    }
+    &:active {
+        color: darken($primary-light, 20%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headline-font;
+    font-weight: $bold-weight;
+    color: $primary-dark;
+}
+
+pre, code {
+    font-family: $monospace-font;
+}
+
+pre {
+    @extend .outline;
+    padding: $spacer-small;
+}
+
+hr {
+    @extend .no-padding;
+    border-color: $primary-dark;
+}

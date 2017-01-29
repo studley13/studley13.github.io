@@ -1,15 +1,15 @@
 // Typeface and Swatch configuration for the teamred theme
 
 // Colors
-$primary-light:     red;
-$primary-dark:      red;
+$primary-light:     #E05750;
+$primary-dark:      #D02720;
 $secondary-light:   purple;
 $secondary-dark:    purple;
 
 $background-dark:   #272020;
 $background-light:  #E7E0DA;
-$card-dark:         lighten($background-dark, 20%);
-$card-light:        darken($background-light, 15%);
+$card-dark:         lighten($background-dark, 5%);
+$card-light:        darken($background-light, 5%);
 
 $text-grey-dark:    #A09087;
 $text-dark:         #D0C0B7;
@@ -20,6 +20,9 @@ $text-light:        #302727;
 $body-font:         "Muli", Helvetica, Arial, sans-serif;
 $headline-font:     "Josefin Sans", Helvetica, Arial, sans-serif;
 $monospace-font:    "Source Code Pro", monospace;
+$normal-weight:     400;
+$light-weight:      300;
+$bold-weight:       600;
 
 // Sizes
 $content-width:     1024px;
@@ -29,3 +32,8 @@ $laptop-max:        960px;
 $spacer-large:      24px;
 $spacer-medium:     12px;
 $spacer-small:      8px;
+
+// Imports
+@import "teamred/blocks";
+@import "teamred/standard";
+@import "teamred/tomorrow-night";
