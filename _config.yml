@@ -1,7 +1,7 @@
 # Global
 timezone: Australia/Sydney
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://teamred.rocks/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://teamred.rocks" # the base hostname & protocol for your site, e.g. http://example.com
 future: true
 
 # Site Metadata
