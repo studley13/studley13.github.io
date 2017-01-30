@@ -14,10 +14,11 @@
         display: block;
         clear: left;
         float: left;
-        padding: 7px $spacer-small 1px $spacer-small;
+        padding: 9px $spacer-small 2px $spacer-small;
         font-family: $headline-font;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: $bold-weight;
+        text-transform: uppercase;
     }
 
     i.show-menu {
