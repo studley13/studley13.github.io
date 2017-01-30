@@ -1,0 +1,27 @@
+// Mixins
+
+@mixin device($device-width) {
+    @media screen and (max-width: $device-width) {
+        @content;
+    }
+}
+
+@mixin button($background-color) {
+    font-family: $headline-font;
+    display: block;
+    margin: 4px;
+    padding: 9px $spacer-small 5px $spacer-small;
+    border-radius: 2px;
+    color: $background-color;
+    background-color: $primary-dark;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: $bold-weight;
+
+    &:hover {
+        background-color: $primary-light;
+    }
+    &:active {
+        background-color: darken($primary-light, 20%);
+    }
+}

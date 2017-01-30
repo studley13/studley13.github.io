@@ -1,10 +1,12 @@
 // Standard HTML elements
 
-html {
+html, body {
+    @extend .no-padding;
     font-family: $body-font;
     background-color: $background-dark;
     color: $text-dark;
     font-weight: $normal-weight;
+    overflow: auto;
 }
 
 a {
@@ -37,4 +39,5 @@ pre {
 hr {
     @extend .no-padding;
     border-color: $primary-dark;
+    border-style: solid;
 }

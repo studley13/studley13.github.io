@@ -3,6 +3,13 @@
 .no-padding {
     padding: 0;
     margin: 0;
+    overflow: hidden;
+}
+
+.content-size {
+    @extend .no-padding;
+    max-width: $content-width;
+    margin: 0 auto;
 }
 
 .rounded {
@@ -20,3 +27,4 @@
     //background-color: $card-dark;
     border: 2px solid $primary-light;
 }
+

@@ -3,8 +3,9 @@
 // Colors
 $primary-light:     #E05750;
 $primary-dark:      #D02720;
-$secondary-light:   purple;
-$secondary-dark:    purple;
+$secondary-light:   #A050D0;
+$secondary-dark:    #7020A0;
+$background-head:   #401060;
 
 $background-dark:   #272020;
 $background-light:  #E7E0DA;
@@ -26,14 +27,17 @@ $bold-weight:       600;
 
 // Sizes
 $content-width:     1024px;
-$mobile-max:        640px;
-$laptop-max:        960px;
+$on-mobile:        640px;
+$on-tablet:        960px;
 
 $spacer-large:      24px;
 $spacer-medium:     12px;
 $spacer-small:      8px;
 
 // Imports
+@import "teamred/mixin";
 @import "teamred/blocks";
 @import "teamred/standard";
+@import "teamred/base";
 @import "teamred/tomorrow-night";
+

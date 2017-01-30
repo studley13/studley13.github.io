@@ -1,0 +1,86 @@
+// Items that appear in the base page layout
+
+.site-header {
+    @extend .no-padding;
+    background-color: $background-head;
+    color: $primary-dark;
+    border-bottom: 2px solid $primary-dark;
+
+    .wrapper {
+        @extend .content-size;
+    }
+
+    .site-title, i.show-menu {
+        display: block;
+        clear: left;
+        float: left;
+        padding: 7px $spacer-small 1px $spacer-small;
+        font-family: $headline-font;
+        font-size: 24px;
+        font-weight: $bold-weight;
+    }
+
+    i.show-menu {
+        font-weight: $normal-weight;
+        float: right;
+        clear: right;
+        display: none;
+        padding: 6px;
+        @include device($on-tablet) {
+            display: block;
+        }
+    }
+
+
+    ul {
+        @extend .no-padding;
+        list-style: none;
+        float: right;
+
+        @include device($on-tablet) {
+            float: none;
+            clear: both;
+            padding: 4px;
+        }
+
+        li {
+            @extend .no-padding;
+            display: block;
+            list-style: none;
+            float: left;
+            text-align: center;
+
+            @include device($on-tablet) {
+                width: 20%;
+            }
+            @include device($on-mobile) {
+                float: none;
+                clear: both;
+                width: auto;
+            }
+
+            a {
+                @include button($background-head);
+            }
+        }
+    }
+}
+
+.page-content {
+    @extend .content-size;
+
+    .wrapper {
+        padding:  $spacer-small;
+    }
+}
+
+.site-footer {
+    @extend .no-padding;
+    background-color: $background-head;
+    color: $primary-dark;
+    border-top: 2px solid $primary-dark;
+
+    .wrapper {
+        @extend .content-size;
+    }
+}

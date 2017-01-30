@@ -1,6 +1,5 @@
 ---
 title: Test Syntax
-layout: page
 ---
 
 Markdown: Syntax
