@@ -17,10 +17,20 @@ $text-dark:         #D0C0B7;
 $text-grey-light:   #605047;
 $text-light:        #302727;
 
+$mono-white:        #F7F7F7;
+$mono-dark:         #202020;
+$mono-black:        #000000;
+
+// Line widths
+$line-normal:        2px;
+$line-thick:         4px;
+$line-thin:          1px;
+
 // Typefaces
 $body-font:         "Muli", Helvetica, Arial, sans-serif;
 $headline-font:     "Josefin Sans", Helvetica, Arial, sans-serif;
 $monospace-font:    "Source Code Pro", monospace;
+$icon-font:         "FontAwesome";
 $normal-weight:     400;
 $light-weight:      300;
 $bold-weight:       600;
@@ -40,4 +50,8 @@ $spacer-small:      8px;
 @import "teamred/standard";
 @import "teamred/base";
 @import "teamred/tomorrow-night";
+
+@media print {
+    @import "teamred/tomorrow";
+}
 

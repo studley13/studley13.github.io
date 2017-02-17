@@ -5,7 +5,7 @@
     <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
 
     <nav class="site-nav">
-      <i class="show-menu fa fa-bars"></i>
+      <i class="show-menu fa fa-bars" aria-hidden="true"></i>
       <div class="trigger">
         <ul>
         {% for my_page in site.pages %}

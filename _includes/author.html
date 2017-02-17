@@ -1,0 +1,36 @@
+<div class="post-meta">
+  {% if page.date %}
+    {% if page.authors%}
+      <div class="post-avatars">
+      {% for author_id in page.authors %}
+        {% assign author = site.data.contributors[author_id] %}
+        <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}" title="{{ author.name }}" alt="{{ author.name }}" />
+      {% endfor %}
+      </div>
+    {% else if page.author %}
+      {% assign author = site.data.contributors[page.author] %}
+      <div class="post-avatars">
+        <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}" title="{{ author.name }}" alt="{{ author.name }}" />
+      </div>
+    {% endif %}
+
+    <div class="meta-text">
+    {% if page.authors%}
+      <div class="post-authors">
+      {% for author_id in page.authors %}
+        {% assign author = site.data.contributors[author_id] %}
+        {% if forloop.last and forloop.length > 1 %} and {% endif %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></span>{% if forloop.last == false and forloop.length > 2 %},
+        {% endif %}
+      {% endfor %}
+      </div>
+    {% else if page.author %}
+      {% assign author = site.data.contributors[page.author] %}
+      <div class="post-authors">
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></span>
+      </div>
+    {% endif %}
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%a %b %-d, %Y" }}</time>
+    </div>
+  {% endif %}
+</div>

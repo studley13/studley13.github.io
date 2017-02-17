@@ -7,6 +7,10 @@ html, body {
     color: $text-dark;
     font-weight: $normal-weight;
     overflow: auto;
+
+    @media print {
+        color: $mono-black;
+    }
 }
 
 a {
@@ -25,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $headline-font;
     font-weight: $bold-weight;
     color: $primary-dark;
+
+    @media print {
+        color: $mono-dark;
+    }
 }
 
 pre, code {
@@ -34,6 +42,8 @@ pre, code {
 pre {
     @extend .outline;
     padding: $spacer-small;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 hr {
