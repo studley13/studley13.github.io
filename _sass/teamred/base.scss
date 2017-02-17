@@ -186,3 +186,9 @@
         @extend .content-size;
     }
 }
+
+#disqus_thread {
+    @media print {
+        display: none;
+    }
+}
