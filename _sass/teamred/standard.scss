@@ -1,59 +1,118 @@
 // Standard HTML elements
 
 html, body {
-    @extend .no-padding;
-    font-family: $body-font;
-    background-color: $background-dark;
-    color: $text-dark;
-    font-weight: $normal-weight;
-    overflow: auto;
+  @extend .no-padding;
+  font-family: $body-font;
+  background-color: $background-dark;
+  color: $text-dark;
+  font-weight: $normal-weight;
+  overflow: auto;
 
-    @media print {
-        color: $mono-black;
-        background: #FFFFFF;
-    }
+  @media print {
+    color: $mono-black;
+    background: #FFFFFF;
+  }
+}
+
+p {
+  page-break-inside: avoid;
 }
 
 a {
+  color: $primary-light;
+  text-decoration: none;
+  font-weight: $bold-weight;
+  &:hover {
     color: $primary-light;
-    text-decoration: none;
-    font-weight: $bold-weight;
-    &:hover {
-        color: $primary-light;
-        text-decoration: underline;
-    }
-    &:active {
-        color: darken($primary-light, 20%);
-    }
+    text-decoration: underline;
+  }
+  &:active {
+    color: darken($primary-light, 20%);
+  }
 
-    @media print {
-        color: $primary-dark;
-    }
+  @media print {
+    color: $primary-dark;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $headline-font;
-    font-weight: $bold-weight;
-    color: $primary-dark;
+  font-family: $headline-font;
+  font-weight: $bold-weight;
+  color: $primary-dark;
 
-    @media print {
-        color: $mono-dark;
-    }
+  @media print {
+    color: $mono-dark;
+  }
 }
 
 pre, code {
-    font-family: $monospace-font;
+  font-family: $monospace-font;
 }
 
 pre {
-    @extend .outline;
-    padding: $spacer-small;
-    word-wrap: break-word;
-    white-space: pre-wrap;
+  @extend .outline;
+  padding: $spacer-small;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 hr {
-    @extend .no-padding;
-    border-color: $primary-dark;
-    border-style: solid;
+  @extend .no-padding;
+  border-color: $primary-dark;
+  border-style: solid;
+}
+
+table {
+  margin: $spacer-small auto;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+
+  thead {
+    border-bottom: $line-thick solid $text-dark;
+    @media print {
+      border-color: $mono-dark;
+    }
+  }
+
+  tfoot {
+    border-top: $line-thick solid $text-dark;
+    @media print {
+      border-color: $mono-dark;
+    }
+  }
+
+  th, td {
+    padding: 0.2em 0.6em;
+    border: {
+      color: $text-dark;
+      style: solid;
+      width: 0 $line-thin;
+    }
+    @media print {
+      border-color: $mono-dark;
+    }
+  }
+  th:first-child, td:first-child {
+    border-left-width: 0;
+  }
+  th:last-child, td:last-child {
+    border-right-width: 0;
+  }
+
+  tr {
+    border: {
+      color: $text-dark;
+      style: dotted;
+      width: $line-thin 0;
+    }
+    @media print {
+      border-color: $mono-dark;
+    }
+  }
+  tr:first-child {
+    border-top-width: 0;
+  }
+  tr:last-child {
+    border-bottom-width: 0;
+  }
 }

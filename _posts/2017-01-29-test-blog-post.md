@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 ---
 
 This is just going to test some basic code.
