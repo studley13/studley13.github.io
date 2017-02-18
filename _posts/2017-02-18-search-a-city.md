@@ -2,6 +2,14 @@
 layout: post
 title: Search a City
 author: curtis
+tags:
+  - maths
+  - bits
+  - binary
+  - computing
+  - security
+categories:
+  - security
 ---
 
 # Let's Play a (Morbid) Game
