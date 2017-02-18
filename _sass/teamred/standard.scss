@@ -31,14 +31,14 @@ a {
   }
 
   @media print {
-    color: $primary-dark;
+    color: $mono-dark;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headline-font;
   font-weight: $bold-weight;
-  color: $primary-dark;
+  color: $primary-light;
 
   @media print {
     color: $mono-dark;
@@ -60,6 +60,11 @@ hr {
   @extend .no-padding;
   border-color: $primary-dark;
   border-style: solid;
+  border-width: $line-thin;
+
+  @media print {
+    border-color: $mono-black;
+  }
 }
 
 table {
@@ -68,28 +73,28 @@ table {
   page-break-inside: avoid;
 
   thead {
-    border-bottom: $line-thick solid $text-dark;
+    border-bottom: $line-thick solid $primary-dark;
     @media print {
-      border-color: $mono-dark;
+      border-color: $mono-black;
     }
   }
 
   tfoot {
-    border-top: $line-thick solid $text-dark;
+    border-top: $line-thick solid $primary-dark;
     @media print {
-      border-color: $mono-dark;
+      border-color: $mono-black;
     }
   }
 
   th, td {
     padding: 0.2em 0.6em;
     border: {
-      color: $text-dark;
+      color: $primary-dark;
       style: solid;
       width: 0 $line-thin;
     }
     @media print {
-      border-color: $mono-dark;
+      border-color: $mono-black;
     }
   }
   th:first-child, td:first-child {
@@ -101,12 +106,12 @@ table {
 
   tr {
     border: {
-      color: $text-dark;
+      color: $primary-dark;
       style: dotted;
       width: $line-thin 0;
     }
     @media print {
-      border-color: $mono-dark;
+      border-color: $mono-black;
     }
   }
   tr:first-child {
@@ -114,5 +119,21 @@ table {
   }
   tr:last-child {
     border-bottom-width: 0;
+  }
+}
+
+blockquote {
+  margin: 0;
+  padding: $spacer-small $spacer-medium;
+  border: {
+    width: 0 $line-thick;
+    color: $primary-dark;
+    style: solid;
+  }
+
+  page-break-inside: avoid;
+
+  @media print {
+    border-color: $mono-black;
   }
 }

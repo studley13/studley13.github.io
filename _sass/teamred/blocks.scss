@@ -25,7 +25,7 @@
 .outline {
     @extend .rounded;
     //background-color: $card-dark;
-    border: $line-normal solid $primary-light;
+    border: $line-normal solid $primary-dark;
 
     @media print {
         border-radius: 0;

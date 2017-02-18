@@ -23,6 +23,7 @@
         font-size: 22px;
         font-weight: $bold-weight;
         text-transform: uppercase;
+        color: $primary-dark;
     }
 
     i.show-menu {
@@ -90,7 +91,6 @@
             text-transform: uppercase;
             margin: 0.3em $spacer-large 0.1em $spacer-large;
             @media print {
-                color: $mono-dark;
                 text-transform: none;
             }
         }
@@ -98,17 +98,17 @@
         .post-meta {
             border: {
                 style: solid;
-                color: $primary-light;
+                color: $primary-dark;
                 width: $line-thin;
             }
             overflow: hidden;
-            background-color: $primary-light;
+            background-color: $primary-dark;
+            text-align: center;
 
             @media print {
                 font-size: 0.9em;
                 border-color: $mono-black;
                 border-width: $line-normal 0 0 0;
-                text-align: center;
             }
         }
 
@@ -118,7 +118,7 @@
             float: left;
             border: {
                 style: solid;
-                color: $primary-light;
+                color: $primary-dark;
                 width: $line-thin;
             }
 
@@ -127,7 +127,7 @@
                 float: left;
                 width: $height;
                 height: $height;
-                border-right: $line-normal solid $primary-light;
+                border-right: $line-normal solid $primary-dark;
             }
 
             img:last-of-type {
@@ -138,9 +138,9 @@
                 display: none;
             }
 
-            @include device($on-mobile) {
-                display: none;
-            }
+            //@include device($on-mobile) {
+            //    display: none;
+            //}
         }
 
         .meta-text {
@@ -149,7 +149,7 @@
             padding: 0 $spacer-medium;
             border: {
                 style: solid;
-                color: $primary-light;
+                color: $primary-dark;
                 width: $line-thin;
             }
 
@@ -173,6 +173,21 @@
             font-weight: $normal-weight;
             font-size: 1.1em;
         }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100vh;
+      margin: $spacer-small auto;
+
+      &.medium {
+        max-height: 512px;
+      }
+
+      &.small {
+        max-height: 256px;
+      }
     }
 }
 
