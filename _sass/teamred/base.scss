@@ -78,7 +78,11 @@
     $height: 48px;
 
     .wrapper {
-        padding:  $spacer-small;
+        padding: $spacer-small;
+
+        @include device($on-mobile) {
+          padding: $spacer-small 0;
+        }
     }
 
     .post-header {
@@ -175,6 +179,12 @@
         }
     }
 
+    .post-content {
+      @include device($on-mobile) {
+        padding: $spacer-small;
+      }
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -187,6 +197,15 @@
 
       &.small {
         max-height: 256px;
+      }
+    }
+
+    video {
+      width: 100%;
+      margin: $spacer-medium 0;
+
+      @media print {
+        display: none;
       }
     }
 }
