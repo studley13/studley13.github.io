@@ -1,5 +1,5 @@
 ---
-title: When You're Dead, You're Dead
+title: Memento Mori
 video-urls: 
   - src: http://s3.teamred.rocks/video/jane-icecream.mp4
     type: video/mp4
