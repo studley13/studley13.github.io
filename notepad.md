@@ -2,6 +2,6 @@
 title: Notepad
 ---
 
-<div contenteditable=true>
-&nbsp;
+<div contenteditable="true">
+Share your thoughts...
 </div>
