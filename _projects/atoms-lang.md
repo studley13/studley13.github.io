@@ -23,7 +23,7 @@ title: Atoms Language
 
 ### Structs
 
-```lisp
+```
 (struct
   ((member_a type_a)
     (member_b type_b)
@@ -41,7 +41,7 @@ title: Atoms Language
 
 ### Enums
 
-```lisp
+```
 (enum
   ((variant struct)
     (variant struct)
@@ -59,7 +59,7 @@ title: Atoms Language
 
 > `match` form
 
-```lisp
+```
 (match name
   ((variant_a expr_a)
     (variant_b expr_b)
@@ -91,7 +91,7 @@ title: Atoms Language
 
 ## Traits
 
-```lisp
+```
 (trait name
   ((type_a constructor_a)
     (type_b constructor_b)
@@ -99,7 +99,7 @@ title: Atoms Language
     (type_n constructor_n)))
 ```
 
-```lisp
+```
 (impl name type
   ((type_a expr_a)
     (type_b expr_b)
@@ -121,7 +121,7 @@ The `def` *form* evaluates an *expression* and binds it to the given *name* in
 its parent's scope. That name will **always** have the *type* of the first value
 it was bound to.
 
-```lisp
+```
 (def name expr)
 ```
 
@@ -138,7 +138,7 @@ the inner *expression*.
 > Note on temprality. It is not clear whether the inhereted scope should refer
 > to the parent's scope when the consumer is created or when it is evaluated.
 
-```lisp
+```
 (bind name expr)
 ```
 
@@ -157,7 +157,7 @@ evaluate to the *type* initially consumed or to a *consumer* of the same type as
 itself, producing what is known as an *iterative consumer*. THe second of the
 two expressions **must** evaluate to the same *type* as was initially consumed.
 
-```lisp
+```
 (bind-final name expr_with expr_without)
 ```
 
@@ -168,14 +168,14 @@ two expressions **must** evaluate to the same *type* as was initially consumed.
 The `lambda` *form* produces a chain of *consumers* that evaluate iteratively
 with a list and eventually produce an expression.
 
-```lisp
+```
 (lambda (arg_a arg_b ... arg_n) 
   expr)
 ```
 
 Is equivalent to
 
-```lisp
+```
 (bind arg_a 
   (bind arg_b
     (... 
@@ -188,7 +188,7 @@ Is equivalent to
 The  `defun` *form* creates a `lambda` and binds it to a *name* in the parent
 *scope*.
 
-```lisp
+```
 (defun name
   (arg_a arg_b ... arg_n)
   expr)
@@ -196,7 +196,7 @@ The  `defun` *form* creates a `lambda` and binds it to a *name* in the parent
 
 Is equivalent to
 
-```lisp
+```
 (def name
   (lambda (arg_a arg_b ... arg_n)
     expr))  
@@ -215,13 +215,13 @@ Due to the restraints on `bind-final`, `lambda-final` must consume one or two
 either the same *type* as the consumed *values* or to an *iterative consumer*
 that consumes and produces values of the same *type* as initially consumed.
 
-```lisp
+```
 (lambda-final (arg_a arg_b) expr_with)
 ```
 
 Is equivalent to
 
-```lisp
+```
 (bind arg_a
   (bind-final arg_b
     expr_with
@@ -238,13 +238,13 @@ The *type* the type produced is *iterative consumer* that consumes and produces
 values of a given *type*. The *type* of *values* consumed must be the same and
 the internal *expression* must evaluate to the same type as the arguments.
 
-```lisp
+```
 (defold name (arg_a arg_b) (expr))
 ```
 
 Is equivalent to
 
-```lisp
+```
 (def name
   (lambda-final (arg_a arg_b) 
     (name (expr))))
@@ -255,7 +255,7 @@ Is equivalent to
 The `let` *form* creates a new *scope* and binds a series of *names* to
 expressions, before evaluating the innermost expression.
 
-```lisp
+```
 (let
   ((arg_a (expr_a))
     (arg_b (expr_b))
@@ -266,7 +266,7 @@ expressions, before evaluating the innermost expression.
 
 Is equivalent to
 
-```lisp
+```
 ((bind arg_a
     (bind arg_b
       (...
