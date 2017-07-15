@@ -34,6 +34,7 @@ defaults:
 collections:
   projects:
     output: true
+    permalink: /:collection/:name/
 
 # Build settings
 markdown: kramdown
