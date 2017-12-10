@@ -3,31 +3,24 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-  </header>
-
   {% if page.video-url %}
-  <video 
+  <video
     src="{{ page.video-url }}"
+		class="post-video"
     {% if page.video-type %}
     type="{{ page.video-type }}"
     {% endif %}
     controls>
   </video>
   {% else if page.video-urls %}
-  <video controls>
+  <video class="post-video" controls>
     {% for video in page.video-urls %}
     <source src="{{ video.src }}" type="{{ video.type }}"/>
     {% endfor %}
   </video>
   {% endif %}
 
-  <header class="post-header">
-    {% include author.html %}
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
+  <div itemprop="articleBody">
     {{ content }}
   </div>
 

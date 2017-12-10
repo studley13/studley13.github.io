@@ -8,4 +8,5 @@ video-urls:
   - src: http://s3.teamred.rocks/video/daniel.webm
     type: video/webm
 layout: video
+hidden: true
 ---

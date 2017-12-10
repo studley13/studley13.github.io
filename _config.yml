@@ -1,35 +1,25 @@
 # Global
 timezone: Australia/Sydney
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://teamred.rocks" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://xurtis.pw" # the base hostname & protocol for your site, e.g. http://example.com
 future: true
+show_downloads: false
+cayman-blog:
+  date_format: "%-d %b %Y"
 
 # Site Metadata
-title: TeamRed Rocks
-author: curtis
-email: "&#x63;&#x75;&#x72;&#x74;&#x69;&#x73;&#x40;&#x63;&#x75;&#x72;&#x74;&#x69;&#x73;&#x6D;&#x2E;&#x6D;&#x65;"
+title: "Curtis Millar"
+author: "Curtis Millar"
+email: "&#x63;&#x75;&#x72;&#x74;&#x69;&#x73;&#x40;&#x78;&#x75;&#x72;&#x74;&#x69;&#x73;&#x2E;&#x70;&#x77;"
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: CurtisMillar
-github_username:  studley13
+  Teacher and student with the faculty of Computer Science and Engineering
+  at UNSW Sydney.
+twitter:
+  username: CurtisMillar
+github_username:  xurtis
 disqus:
-  shortname: teamred-rocks
+  shortname: xurtis-pw
 google_analytics: UA-51914975-2
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
-      author: curtis
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: default
 
 collections:
   projects:
@@ -38,7 +28,7 @@ collections:
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile

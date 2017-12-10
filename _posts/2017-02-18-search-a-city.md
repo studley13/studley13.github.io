@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Search a City
-author: curtis
 tags:
   - maths
   - bits
@@ -10,9 +9,8 @@ tags:
   - security
 categories:
   - security
+tagline: Let's play a morbid game.
 ---
-
-# Let's Play a (Morbid) Game
 
 Here's a fun idea for a game. Let's say my friend and I go to a town with 100
 houses. I go in the day before my friend does and pick a house in the town and
