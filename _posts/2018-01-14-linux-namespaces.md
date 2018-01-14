@@ -4,25 +4,25 @@ tagline: "Isolating processes for cheap."
 ---
 
 [Linux containers][linux-containers] have become popular in recent years
-as an alternative to [virtualization][virtualization], providing
-isolation of processes by creating lightweight machines in which to run
-processes separated from each other.
+as an alternate to [virtualization][virtualization], providing isolation
+of processes by creating lightweight machines to run processes separated
+from each other.
 
 [linux-containers]: https://linuxcontainers.org/
 [virtualization]: https://en.wikipedia.org/wiki/Virtualization
 
 # Emulating virtualization
 
-The two most popular methods of achieving these isolated environments to
-date have been [Docker][docker] and [LXC][lxc]. Both of these solutions
-emulate the behaviour of virtualization. The provide an entire operating
+Two popular methods of achieving these isolated environments to date
+have been [Docker][docker] and [LXC][lxc]. Both of these solutions
+emulate the behaviour of virtualization. Each provides an entire operating
 system environment in the style of a virtual machine that you run your
-process inside that is isolated from the system that they run on.
+process inside of, isolated from the rest of your main OS.
 
 Both manage to achieve this with substantially less overhead than
 what virtualization would normally require. The only catch is that both
 the *host* machine and the *guest* machine have to be some variant of
-Linux. Both provide a repository of complete guest machines you can also
+Linux. Both provide a repository of complete guest machines you can
 download and start from, largely due to the complexity required to set
 one up manually.
 
@@ -32,14 +32,14 @@ one up manually.
 ## But isn't Docker cross platform?
 
 Yes, it is. It achieves this with a simple trick: start up a Linux
-virtual machine using something like the [OS X
+virtual machine using something such as the [OS X
 Hypervisor][osx-hypervisor] or Microsoft's [Hyper-V][hyper-v] and run
 all of the containers from there.
 
-This is a rather inelegant solution, especially considering the layers
-of indirection through a [hypervisor][] that become hidden from the user
-in the process. In general, you're probably better running Docker inside
-an explicit Linux *host*.
+This is an inelegant solution given the layers of indirection through a
+[hypervisor][] that become hidden from the user in the process. In
+general, you're probably better running Docker inside of an explicit Linux
+*host*.
 
 [osx-hypervisor]: https://developer.apple.com/documentation/hypervisor
 [hyper-v]: https://en.wikipedia.org/wiki/Hyper-V
@@ -70,19 +70,19 @@ Every process in Linux exists in one instance of each of the following
 * UTS; which covers the [hostname][] and [domain name][domain] of the system
   the process is running in.
 
-Namespace isolation is the ability to provide processes a its own
-instance of one or more of these namespaces. This can be used to
+Namespace isolation is mechanism which provides processes their own
+instance of one or more of these namespaces. This may be used to
 allocate a restricted set of CPU or memory resources to a set of
 processes by placing them in the same *cgroup* namespace, give a set of
 processes access to a restricted portion of the file system tree by
 placing them in their own *mount* namespace, or give processes their own
-system of which they are running as the [root user][root] (without having
+system wherein it runs as the [root user][root] (without having
 root-level access to the whole system) by placing them in a *user*
 namespace.
 
 By placing a set of processes in a separate collection of these
-namespaces, the processes look as though they exist in their own
-entirely new system, there is no immediate indication that they were
+namespaces the processes appear to exist in their own
+entirely new system and there is no immediate indication that they were
 started from a different set of namespaces.
 
 The details of namespaces in Linux are documented in
@@ -121,19 +121,19 @@ This means that a child is not aware of any parent namespaces it doesn't
 share with its parent, but a parent is aware of the namespaces of its
 direct children. This also means that namespaces can be easily nested.
 
-There are three main ways that a process ends up in a new namespace:
+A process can be moved into a new instance of a namespace in three ways:
 
-* A process can remove itself from a set of namespaces, placing itself
+* A process may remove itself from a set of namespaces, placing itself
   in a newly created set of namespaces using the
   [`unshare(2)`][unshare-2] [syscall][],
-* A process can start a child process or thread and place inside a set
+* A process may start a child process or thread and place inside a set
   of newly created namespaces using the [`clone(2)`][clone-2] syscall,
   or
-* A process can swap the namespace it is in for the namespace of another
+* A process may swap the namespace it is in for the namespace of another
   process that it knows already exists, using the [`setns(2)`][setns-2]
   syscall.
 
-Whilst all of these processes might observe different system resources
+Whilst all of these processes will observe different system resources
 within their namespaces, it's important to note that they are all part
 of the same operating system and all talking to the same Linux kernel.
 All that is effectively occurring is some changes to tables in the
@@ -146,9 +146,9 @@ kernel here.
 
 # Creating *containers*
 
-Returning to Docker and LXC, it should be clear at this point that they
-rely heavily on this namespace mechanism. It's the reason why the
-overhead of their containers is so low. It's also the reason why they
+Returning to Docker and LXC, it should be clear that they
+rely heavily on this namespace mechanism. It's the reason that
+containers have a such a low overhead. It's also the reason they
 both only work on Linux (although both create a complete isolation
 system, similar mechanisms on other operating systems could still be
 used to achieve a very similar result). 
