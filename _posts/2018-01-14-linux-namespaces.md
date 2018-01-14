@@ -22,7 +22,7 @@ process inside that is isolated from the system that they run on.
 Both manage to achieve this with substantially less overhead than
 what virtualization would normally require. The only catch is that both
 the *host* machine and the *guest* machine have to be some variant of
-linux. Both provide a repository of complete guest machines you can also
+Linux. Both provide a repository of complete guest machines you can also
 download and start from, largely due to the complexity required to set
 one up manually.
 
@@ -60,7 +60,7 @@ Every process in Linux exists in one instance of each of the following
   communicate with each other,
 * network; which covers the networking stacks and network devices
   available to a process,
-* [Mount][]; which covers the filesystem tree that a process works
+* [Mount][]; which covers the file system tree that a process works
   within,
 * [PID][]; which covers the unique numeric identifiers that are used to
   address each process,
@@ -74,7 +74,7 @@ Namespace isolation is the ability to provide processes a its own
 instance of one or more of these namespaces. This can be used to
 allocate a restricted set of CPU or memory resources to a set of
 processes by placing them in the same *cgroup* namespace, give a set of
-processes access to a restricted portion of the filesystem tree by
+processes access to a restricted portion of the file system tree by
 placing them in their own *mount* namespace, or give processes their own
 system of which they are running as the [root user][root] (without having
 root-level access to the whole system) by placing them in a *user*
