@@ -9,7 +9,7 @@ tags:
 	- rust
 	- namespace
 tagline: A simple Rust containerisation tool.
-...
+---
 
 The code for this tool is availble on github at
 [xurtis/container][container].
