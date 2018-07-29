@@ -1,3 +1,21 @@
+---
+layout: post
+title: Home rolled Linux Containers
+tags:
+	- container
+	- linux
+	- virtual machine
+	- centos
+	- rust
+	- namespace
+tagline: A simple Rust containerisation tool.
+...
+
+The code for this tool is availble on github at
+[xurtis/container][container].
+
+---
+
 I've spoken about Linux containers before. There are a small set of
 system calls in Linux (namely _clone(2)_, _unshare(2)_, and _setns(2)_)
 which provide mechanisms to contol which namespace the running process
