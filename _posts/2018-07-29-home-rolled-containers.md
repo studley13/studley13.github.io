@@ -2,12 +2,12 @@
 layout: post
 title: Home rolled Linux Containers
 tags:
-	- container
-	- linux
-	- virtual machine
-	- centos
-	- rust
-	- namespace
+  - container
+  - linux
+  - virtual machine
+  - centos
+  - rust
+  - namespace
 tagline: A simple Rust containerisation tool.
 ---
 
