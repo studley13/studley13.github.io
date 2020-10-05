@@ -54,7 +54,7 @@ def document(children = []):
     """
 
     root = h.html(children)
-    return f"<!doctype html>{root}"
+    return f"<!doctype html>{root}\n"
 
 class Redirect:
     """
