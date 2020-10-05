@@ -1,0 +1,19 @@
+# Redirection specifications
+
+# Format:
+# ["path"]
+# title = "Page / redirect title"
+# url = "https://example.com/path/to/redirect"
+# index = false
+
+# Special root is the root directory redirect
+[SPECIAL_ROOT]
+title = "xurt.is"
+url = "https://xurt.is"
+# Display this link in the index
+index = false
+
+[lca2020]
+title = "Anatomy of a run-time"
+url = "https://docs.google.com/presentation/d/1W5xIwWg8YAUbJ_8Y_qhFh7cIchE5vwRvgUZuRiJqLOY/view"
+index = true
