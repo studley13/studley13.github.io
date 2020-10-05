@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install python dependencies
-        run: python3 -m pip install toml
+        run: python3 -m pip install pytoml
       - name: Generate link files
         run: python3 gen-links.py
       - name: Save and commit changes

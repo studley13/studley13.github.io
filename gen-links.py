@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import toml
+import pytoml
 
 from os import makedirs
 from os.path import dirname, join, exists
@@ -71,7 +71,7 @@ class Redirect:
         return redirects
 
     def __init__(self, path, data):
-        self._path = path if path != "SPECIAL_ROOT" else "."
+        self._path = path
         self._title = data["title"]
         self._url = data["url"]
         self._index = data["index"] if "index" in data else False
@@ -146,7 +146,7 @@ def index(redirects):
     ])
 
 if __name__ == "__main__":
-    redirects = Redirect.load_all(toml.load(REDIRECT))
+    redirects = Redirect.load_all(pytoml.load(open(REDIRECT)))
 
     for redirect in redirects.values():
         if not exists(redirect.path):
