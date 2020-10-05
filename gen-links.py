@@ -27,9 +27,9 @@ def node(name):
         attributes = attrlist(attributes)
         if len(children) > 0:
             children = "".join(children)
-            return f"<{name}{attributes}>{children}</{name}>"
+            return f"<{name}{attributes}>{children}</{name}>\n"
         else:
-            return f"<{name}{attributes}/>"
+            return f"<{name}{attributes}/>\n"
 
     return _node
 
@@ -54,7 +54,7 @@ def document(children = []):
     """
 
     root = h.html(children)
-    return f"<!doctype html>{root}\n"
+    return f"<!doctype html>\n\n{root}"
 
 class Redirect:
     """
