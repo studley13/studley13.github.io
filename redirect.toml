@@ -27,3 +27,13 @@ index = true
 title = "Updated substitution cipher guessing app"
 url = "https://nsa-crypto.xurt.is/"
 index = true
+
+[lca2021]
+title = "Slides for the import presentation at LCA 2021"
+url = "https://github.com/xurtis/import/blob/c7d90ab385c887ab281df5fc0e8a59c5e762f832/slides/slides.sh"
+index = true
+
+[import-slides]
+title = "Slides for the import presentation"
+url = "https://github.com/xurtis/import/blob/master/slides/slides.sh"
+index = true
