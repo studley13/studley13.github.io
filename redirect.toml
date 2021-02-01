@@ -37,3 +37,8 @@ index = true
 title = "Slides for the import presentation"
 url = "https://github.com/xurtis/import/blob/master/slides/slides.sh"
 index = true
+
+[mcs-doodle-febuary-2021]
+title = "MCS Meeting time selection doodle (February 2021)"
+utl = "https://doodle.com/poll/76x5dq9yum36z3w6?utm_source=poll&utm_medium=link"
+index = false
