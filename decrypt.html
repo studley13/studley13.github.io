@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Decrypt URL</title>
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+		/>
+
+		<style type="text/css" rel="stylesheet">
+			body {
+				display: grid;
+				place-items: center;
+			}
+
+			article {
+				max-width: 800px;
+			}
+
+			#encrypt:target {
+				display: initial;
+			}
+
+			#encrypt, article:target ~ #decrypt {
+				display: none
+			}
+			#decrypt, #encrypt:target {
+				display: initial;
+			}
+		</style>
+	</head>
+	<body>
+		<article id="encrypt">
+			<header>
+				Encrypt URL
+			</header>
+
+			<label for="name">
+				Name
+				<input type="text" id="name" name="name" required/>
+			</label>
+
+			<label for="title">
+				Title
+				<input type="text" id="title" name="title" required/>
+			</label>
+
+			<label for="url">
+				URL
+				<input type="text" id="url" name="url" required/>
+			</label>
+
+			<label for="key">
+				Password
+				<input type="password" id="key" name="key" required/>
+			</label>
+
+			<figure>
+				<pre><code id="encrypted"></code></pre>
+			</figure>
+		</article>
+
+		<article id="decrypt">
+			<header>
+				Decrypt URL for <strong><tt class="link-name">link</tt></strong>
+			</header>
+
+			<label for="password">
+				Password for
+				<input type="password" id="password" name="password" required/>
+			</label>
+		</article>
+
+		<script type="text/javascript" src="decrypt.js"></script>
+	</body>
+</html>
