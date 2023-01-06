@@ -309,13 +309,13 @@ let initDecrypt = async root => {
 	let url = new URL(window.location.href)
 
 	let name = url.searchParams.get("name")
+	if (name === null) return
+
 	let decode = base64DecToArr
 	let password_salt = decode(url.searchParams.get("password_salt"))
 	let ciphertext = decode(url.searchParams.get("ciphertext"))
 	let counter = decode(url.searchParams.get("counter"))
 	let digest = decode(url.searchParams.get("digest"))
-
-	if (name === null) return
 
 	// Show the name
 	root.querySelectorAll(".link-name").forEach(element => {
