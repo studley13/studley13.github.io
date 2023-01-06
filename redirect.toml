@@ -52,3 +52,13 @@ index=false
 title="Test encrypted URL"
 url="https://xurtis.pw/decrypt.html?name=test&password_salt=I3wnfXpPmjNFWerhWJ4B9g%3D%3D&ciphertext=o73xIq9zA2asvHUS8NFga9Zm1ASRxuboXbuRagBHNOA15gI8G4%2FaqRp6vA%3D%3D&counter=75GY1UDK8u5gcozKR4RP4w%3D%3D&digest=BCSXTGhTApBFjI1YZ04mN%2FZavBJwV5V9ezrL0kwgj5M%3D"
 index=false
+
+["friday"]
+title="Google meet for Friday"
+url="https://xurtis.pw/decrypt.html?name=friday&password_salt=Wgp%2FxqB%2Fi3Ry%2FGeVWyJ0Dg%3D%3D&ciphertext=DjQ6OYXDNY8tBqIG%2B8Cj97O6BxOP57%2BkGXX72pGoyyX%2B9WOQ&counter=LEpyagcQD%2FTrpZnLMnA4ew%3D%3D&digest=Tj%2BO%2BASILcScAjPQMox8XzlTLo54pM4q3zBNXShJud4%3D"
+index=false
+
+["coaching"]
+title="ADHD coaching with Ian Whalert"
+url="https://xurtis.pw/decrypt.html?name=coaching&password_salt=ViaXVgnp6qkeKQGt9ARBWQ%3D%3D&ciphertext=LpeMK2pf9aFFaQrqCDNKOhNK9JOC6Mz2fLJL2uBNmp%2B35mIO06NcMNfpG%2FqXDPLgJobHutHPwRkR%0D%0AVwCkF41U%2Bbg%3D&counter=o79JJ94C99RLzgh8QVs6eA%3D%3D&digest=Fzq0kQHssB6iFuDswM4MXXyw%2B6j7N0gJGufo8rdFxAQ%3D"
+index=false
