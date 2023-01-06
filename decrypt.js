@@ -315,7 +315,6 @@ let initDecrypt = async root => {
 	let counter = decode(url.searchParams.get("counter"))
 	let digest = decode(url.searchParams.get("digest"))
 
-	console.log(password_salt, ciphertext, counter, digest)
 	if (name === null) return
 
 	// Show the name
@@ -352,7 +351,6 @@ let initEncrypt = async root => {
 	onUpdate = async event => {
 		let crypto = await randomCrypto(password.value)
 		let encrypted = await crypto.encrypt(url.value)
-		console.log(encrypted)
 
 		let targetUrl = new URL(window.location)
 		targetUrl.hash = ""
